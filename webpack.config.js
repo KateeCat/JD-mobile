@@ -10,8 +10,10 @@ module.exports = {
 		rules: [
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.(jpg|png|gif|bmp|jpeg)$/, use: 'url-loader' },
-	  { test: /\.scss$/,loader:'style-loader!css-loader!sass-loader'}
+      { test: /\.(jpg|png|gif|bmp|jpeg)$/, use: 'url-loader?name=images/[hash:8].[name].[ext]' },
+	  { test: /\.scss$/,loader:'style-loader!css-loader!sass-loader'},
+	  { test: require.resolve('zepto'),loader: 'exports-loader?window.Zepto!script-loader'}
+
 		]
 	},
 	plugins:[

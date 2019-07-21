@@ -14,4 +14,6 @@
 
 
 4. 新手项目很多不足（bug），欢迎大家批评指教
+
+浏览页面：https://kateecat.github.io/JD-mobile/dist/index.html
   

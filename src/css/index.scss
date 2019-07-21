@@ -7,7 +7,6 @@ $jdRed : #e92322;
 
 .jd-layout {
 	width: 100%;
-	height: 300%;
 	background-color: #eee;
 	.jd-search {
 		display: flex;
@@ -59,8 +58,8 @@ $jdRed : #e92322;
 					float: left;
 				    width: px2rem(18px);
 				    height: px2rem(15px);
-				    background-position: -80px 0;
-				    background-size:200px;
+				    background-position: px2rem(-80px) 0;
+				    background-size:px2rem(200px);
 				    margin-left: px2rem(10px);
 				    margin-top: px2rem(7.5px);
 				    z-index: 1;
@@ -82,48 +81,35 @@ $jdRed : #e92322;
 			top: px2rem(11.5px);
 			color: #fff;
 		}
-		.jd_banner {
-			width: 100%;
-			height: px2rem(185px);
-			position: relative;
-		}
 	}
-	.jd-banner {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		.jd-bannerImg {
-			position: relative;
-			width: 600%;
-			height: px2rem(185px);
-				li {
-					width: px2rem(375px);
-					height: px2rem(185px);
-					float: left;
-					img {
-						width: 100%;
-						height: 100%;
-					}
+	.swiper-container {
+		width:  100%;
+			.swiper-wrapper {
+				img {
+					width: 100%;
+					display: block;
 				}
-		}
-		.jd-indicator {
+			}
+		.swiper-pagination {
 			position: absolute;
 			left: 50%;
 			transform: translate(-50%);
 			bottom: px2rem(15px);
 			z-index: 20;
-			width: px2rem(128px);
+			width: px2rem(150px);
 			height:px2rem(10px);
-			> li {
+			> .swiper-pagination-bullet {
 				float: left;
 				width: px2rem(5px);
 				height: px2rem(5px);
 				border: 1px solid #fff;
 				border-radius: 50%;
 				margin-left: px2rem(10px);
-				 &.active {
-						background-color: #fff;
-					}
+			}
+			.swiper-pagination-bullet-active {
+				width: px2rem(5px);
+				height: px2rem(5px);
+				background-color: #fff;
 			}
 		}
 	}
@@ -450,7 +436,7 @@ $jdRed : #e92322;
 		background-color: #fff;
 		.news-log {
 			float: left;
-			width: px2rem(86px);
+			width: 30%;
 			height: px2rem(30px);
 			a {
 				display: block;
@@ -467,23 +453,26 @@ $jdRed : #e92322;
 
 		.news-more {
 			float: right;
-			width: px2rem(38px);
+			width: 10%;
 			height: px2rem(30px);
 			a {
 				display: block;
 				margin-top: px2rem(8px);
 				margin-left: px2rem(8px);
+				margin-bottom: px2rem(8px);
 				border-right: 1px solid #eee;
-				padding-right: px2rem(2px);
+				font-size: px2rem(14px);
 			}
 		}
-		.news-content {
-			margin-left: px2rem(86px);
-			margin-right: px2rem(36px);
+		.swiper-container {
+			margin-left: 30%;
+			margin-right: 10%;
 			height: 100%;
+			width: 60%;
 			overflow: hidden;
+			font-size: px2rem(14px);
 			ul {
-				width: 100%;
+				// width: 100%;
 				line-height: px2rem(30px);
 				li {
 					display: block;

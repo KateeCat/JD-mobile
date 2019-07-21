@@ -3,7 +3,7 @@ window.onload = function () {
 	time();
 }
 function search() {
-	var banner = document.querySelector(".jd-banner");
+	var banner = document.querySelector(".swiper-container");
 	var bannerheight = banner.offsetHeight;
 	var search = document.querySelector(".jd-search")
 	window.onscroll = function () {
